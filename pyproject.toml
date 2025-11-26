@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "linkvertise-bypasser"
+version = "0.1.1"
+description = "Bypass linkvertise links using the internal API"
+authors = ["MRtecno98 <mr.tecno98@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+requests = "^2.32.3"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

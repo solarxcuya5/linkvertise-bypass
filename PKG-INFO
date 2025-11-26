@@ -1,0 +1,51 @@
+Metadata-Version: 2.1
+Name: linkvertise-bypasser
+Version: 0.1.1
+Summary: Bypass linkvertise links using the internal API
+License: MIT
+Author: MRtecno98
+Author-email: mr.tecno98@gmail.com
+Requires-Python: >=3.10,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: requests (>=2.32.3,<3.0.0)
+Description-Content-Type: text/markdown
+
+# Linkvertise Bypasser
+
+Bypasses linkvertise links by accessing their internal GraphQL API,
+without the need of a browser.
+
+# Example Usage
+
+## Basic single URL
+
+```python
+import linkvertise_bypasser as linkvertise
+
+ad_url = "https://linkvertise.com/12345/example"
+url = linkvertise.bypass(ad_url)
+```
+
+## From User ID and Post name
+
+```python
+import linkvertise_bypasser as linkvertise
+
+post = linkvertise.Post(12345, "example")
+url = linkvertise.get_url(post)
+```
+
+## Keeping session between requests
+
+```python
+import requests
+import linkvertise_bypasser as linkvertise
+
+session = requests.Session()
+for ad_url in urls:
+	url = linkvertise.bypass(ad_url, session=session)
+```

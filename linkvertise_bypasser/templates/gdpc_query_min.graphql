@@ -1,0 +1,10 @@
+mutation getDetailPageContent($linkIdentificationInput: PublicLinkIdentificationInput!, 
+	$origin: String, $additional_data: CustomAdOfferProviderAdditionalData!) {
+  getDetailPageContent(
+    linkIdentificationInput: $linkIdentificationInput
+    origin: $origin
+    additional_data: $additional_data
+  ) {
+    access_token
+  }
+}

@@ -1,0 +1,9 @@
+mutation completeDetailPageContent($linkIdentificationInput: PublicLinkIdentificationInput!, 
+	$completeDetailPageContentInput: CompleteDetailPageContentInput!) {
+  completeDetailPageContent(
+    linkIdentificationInput: $linkIdentificationInput
+    completeDetailPageContentInput: $completeDetailPageContentInput
+  ) {
+    TARGET
+  }
+} 

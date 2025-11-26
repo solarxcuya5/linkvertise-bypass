@@ -1,0 +1,18 @@
+mutation completeDetailPageContent($linkIdentificationInput: PublicLinkIdentificationInput!, 
+	$completeDetailPageContentInput: CompleteDetailPageContentInput!) {
+  completeDetailPageContent(
+    linkIdentificationInput: $linkIdentificationInput
+    completeDetailPageContentInput: $completeDetailPageContentInput
+  ) {
+    CUSTOM_AD_STEP
+    TARGET
+    additional_target_access_information {
+      remaining_waiting_time
+      can_not_access
+      should_show_ads
+      has_long_paywall_duration
+      __typename
+    }
+    __typename
+  }
+} 
