@@ -1,0 +1,12 @@
+mutation getDetailPageTarget($linkIdentificationInput: PublicLinkIdentificationInput!, $token: String!) {
+  getDetailPageTarget(
+    linkIdentificationInput: $linkIdentificationInput
+    token: $token
+  ) {
+    type
+    url
+    paste
+    short_link_title
+    __typename
+  }
+}
